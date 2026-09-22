@@ -30,7 +30,5 @@ export function analyzeDisagreements() {
 }
 
 export function getThemeSummary() {
-  const themes = analyzeThemes();
-  const disagreements = analyzeDisagreements();
-  return { themes, disagreements, expertCount: transcripts.length };
+  return { themes: analyzeThemes(), disagreements: analyzeDisagreements(), expertCount: transcripts.length };
 }
